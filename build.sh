@@ -71,7 +71,7 @@ TM=$(date +"%F%S")
 
 # Specify Final Zip Name
 ZIPNAME=Star-Kernel
-FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-BETA-1-${TM}.zip
+FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-BETA-2-${TM}.zip
 
 # Specify compiler [ proton, nexus, aosp ]
 COMPILER=aosp
