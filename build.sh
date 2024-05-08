@@ -27,7 +27,7 @@ fi
 
 DEVICE=$2
 
-VERSION=BETA
+VERSION=ALTAIR
 if [ "${DEVICE}" = "alioth" ]; then
 DEFCONFIG=alioth_defconfig
 MODEL="Poco F3"
@@ -70,8 +70,8 @@ DATE=$(TZ=Europe/Lisbon date +"%Y%m%d-%T")
 TM=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=Star-Kernel
-FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-BETA-2-${TM}.zip
+ZIPNAME=Star-Kernel-Altair
+FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-${TM}.zip
 
 # Specify compiler [ proton, nexus, aosp ]
 COMPILER=aosp
