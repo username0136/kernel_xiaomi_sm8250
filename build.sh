@@ -27,7 +27,7 @@ fi
 
 DEVICE=$2
 
-VERSION=BETA
+VERSION=SpecialEdition
 if [ "${DEVICE}" = "alioth" ]; then
 DEFCONFIG=alioth_defconfig
 MODEL="Poco F3"
@@ -70,7 +70,7 @@ DATE=$(TZ=Europe/Lisbon date +"%Y%m%d-%T")
 TM=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=Star-Kernel
+ZIPNAME=STAR-Kernel-SpecialEdition
 FINAL_ZIP=${ZIPNAME}-${VERSION}-${DEVICE}-BETA-1-${TM}.zip
 
 # Specify compiler [ proton, nexus, aosp ]
@@ -189,8 +189,8 @@ function exports() {
         export SUBARCH=arm64
                
         # KBUILD HOST and USER
-        export HOST= PixelStar
-	export USER= Builder
+        export HOST=ClearLinux
+	export USER=Quick
         
         # CI
         if [ "$CI" ]
