@@ -66,7 +66,7 @@ KERVER=$(make kernelversion)
 COMMIT_HEAD=$(git log --oneline -1)
 
 # Date and Time
-DATE=$(TZ=Europe/Lisbon date +"%Y%m%d-%T")
+DATE=$(TZ=Asia/Kolkata date +"%Y%m%d-%T")
 TM=$(date +"%F%S")
 
 # Specify Final Zip Name
@@ -190,7 +190,7 @@ function exports() {
                
         # KBUILD HOST and USER
         export HOST=ClearLinux
-	export USER=Quick
+	export USER="Quick"
         
         # CI
         if [ "$CI" ]
@@ -388,11 +388,11 @@ END=$(date +"%s")
 DIFF=$(($END - $START))
 move
 # KernelSU
-echo "CONFIG_KSU=y" >> $(pwd)/arch/arm64/configs/$DEFCONFIG
-compile_ksu
-move_ksu
+#echo "CONFIG_KSU=y" >> $(pwd)/arch/arm64/configs/$DEFCONFIG
+#compile_ksu
+#move_ksu
 zipping
-if [ "$BUILD" = "local" ]; then
+#if [ "$BUILD" = "local" ]; then
 # Discard KSU changes in defconfig
-git restore arch/arm64/configs/$DEFCONFIGf
-fi
+#git restore arch/arm64/configs/$DEFCONFIGf
+#fi
